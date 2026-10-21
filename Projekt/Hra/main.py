@@ -15,8 +15,6 @@ FPS = 60
 
 # Set up the display
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-
-#přepis názvu pygame okna
 pygame.display.set_caption("Moje hra")
 
 #load images
