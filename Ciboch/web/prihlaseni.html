@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Přihlášení – Flappy Bird</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="../assets/sprites/bluebird-midflap.png" alt="" width="34" height="24">
+      Flappy Bird
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <a href="index.html">Domů</a>
+      <a href="o-hre.html">O hře</a>
+      <a href="zebricek.html">Žebříček</a>
+      <a href="prihlaseni.html" aria-current="page">Přihlášení</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1>Přihlášení</h1>
+      <p>Přihlas se, aby se ti ukládalo skóre.</p>
+
+      <form action="#" method="post">
+        <label>
+          Uživatelské jméno
+          <input type="text" name="uzivatelske_jmeno" autocomplete="username" required>
+        </label>
+        <label>
+          Heslo
+          <input type="password" name="heslo" autocomplete="current-password" required>
+        </label>
+        <button class="btn" type="submit">Přihlásit se</button>
+      </form>
+
+      <p class="note">Formulář zatím nic neodesílá. Později se napojí na tabulku Uživatel v databázi.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Školní maturitní projekt, 4. ročník.</p>
+  </footer>
+
+</body>
+</html>

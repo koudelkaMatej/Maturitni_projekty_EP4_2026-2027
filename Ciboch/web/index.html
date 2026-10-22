@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flappy Bird – maturitní projekt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="../assets/sprites/bluebird-midflap.png" alt="" width="34" height="24">
+      Flappy Bird
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <a href="index.html" aria-current="page">Domů</a>
+      <a href="o-hre.html">O hře</a>
+      <a href="zebricek.html">Žebříček</a>
+      <a href="prihlaseni.html">Přihlášení</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel hero">
+      <div>
+        <h1>Flappy Bird</h1>
+        <p>Maturitní projekt: hra v Pythonu s knihovnou Pygame, databáze se skóre hráčů a tento web.</p>
+        <div class="actions">
+          <a class="btn" href="o-hre.html">Jak hrát</a>
+          <a class="btn second" href="zebricek.html">Žebříček</a>
+        </div>
+      </div>
+
+      <div class="scene" aria-hidden="true">
+        <img class="pipe top" style="--x: 58%; --t: 140px" src="../assets/sprites/pipe-green.png" alt="">
+        <img class="pipe bottom" style="--x: 58%; --t: 140px" src="../assets/sprites/pipe-green.png" alt="">
+        <img class="pipe top" style="--x: 88%; --t: 90px" src="../assets/sprites/pipe-green.png" alt="">
+        <img class="pipe bottom" style="--x: 88%; --t: 90px" src="../assets/sprites/pipe-green.png" alt="">
+        <img class="bird" src="../assets/sprites/bluebird-midflap.png" alt="">
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 2rem">
+      <h2>Z čeho se projekt skládá</h2>
+      <dl class="parts">
+        <dt>Hra</dt>
+        <dd>Pták, který proletí mezi rourami. Ovládá se mezerníkem nebo šipkou nahoru.</dd>
+        <dt>Databáze</dt>
+        <dd>Ukládá uživatele a skóre z každé odehrané hry.</dd>
+        <dt>Web</dt>
+        <dd>Popis hry, žebříček nejlepších hráčů a přihlášení.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>Školní maturitní projekt, 4. ročník.</p>
+  </footer>
+
+</body>
+</html>

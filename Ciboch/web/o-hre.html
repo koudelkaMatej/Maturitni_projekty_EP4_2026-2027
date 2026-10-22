@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O hře – Flappy Bird</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="../assets/sprites/bluebird-midflap.png" alt="" width="34" height="24">
+      Flappy Bird
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <a href="index.html">Domů</a>
+      <a href="o-hre.html" aria-current="page">O hře</a>
+      <a href="zebricek.html">Žebříček</a>
+      <a href="prihlaseni.html">Přihlášení</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1>O hře</h1>
+      <p>Cílem je dostat ptáka co nejdál. Pták neustále padá a každé mávnutí ho vymrští nahoru. Když narazíš do roury nebo do země, hra končí.</p>
+
+      <h2>Ovládání</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Klávesa</th><th>Co udělá</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mezerník</td><td>Pták mávne křídly a vyletí nahoru</td></tr>
+            <tr><td>Šipka nahoru</td><td>Totéž co mezerník</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Jak hru spustit</h2>
+      <p>Potřebuješ Python 3 a knihovnu Pygame. V terminálu ve složce <code>Flappy-bird</code> spusť:</p>
+      <p><code>pip install pygame</code><br><code>python flappy.py</code></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Školní maturitní projekt, 4. ročník.</p>
+    <p>Základ hry: Leonardo Marques (původní projekt na GitHubu). Vlastní úpravy a rozšíření: doplň své jméno.</p>
+  </footer>
+
+</body>
+</html>
