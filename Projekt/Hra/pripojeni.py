@@ -1,0 +1,6 @@
+
+
+HOST=
+USER=
+PASSWORD=
+DATABASE=

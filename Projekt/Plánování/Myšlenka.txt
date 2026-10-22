@@ -1,7 +1,31 @@
-Mám 2 nápady na hry:
+Factorio like hra: Astrallift
 
-    1: Tower Defense, nějak prostě koukat na coding with russ a věřím že bych to pochopil. Obtížnost: Střední-Těžké
+Bude mapa, která bude pixelovaná.
 
-    2: Factorio ale low budget, to se mi jako nápad líbí asi nejvíc
+Na jednom konci mapy bude nějaký space elevator, do kterého budeme feedit věci.
 
-    3: Subway surfers or shit, Jsem zombie, procházím a musím jít stále dopředu prtože nevim, a musim se vyhybat vojakum...
+Na druhém konci mapy, bude iron ore source
+
+Budeme ho moci vytěžit sami, či stroji.
+
+KAždý item, bude mít svojí vlastní hodnotu
+iron ore = 1 bod
+iron ingot= 2 body
+iron plate = 4 body atd...
+
+Bude se to moci crafit, smeltit, kovat, rubat všechno
+
+Bude časový limit 1, 3 nebo 5 minut.
+Za ten limit musí se hráči pokusit odevzdat co nejvíce bodů do výtahu, kterej je potom na konci hry spočítá vlastně a zapíše do databáze. 
+
+
+Itemy:
+iron ore = 1 bod
+iron ingot = 2 body
+iron plate = 4 body atd
+iron block = 10 bodů
+
+Stroje:
+miner = 3 ore
+smelter = 4 ingot
+assembler = 10 iron plate

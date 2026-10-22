@@ -1,4 +1,4 @@
-import pygame, sys                                                                                                          # Načte knihovnu Pygame pro hru a modul sys pro ukončení programu.
+import pygame, sys, _mysql_connector                                                                                                          # Načte knihovnu Pygame pro hru a modul sys pro ukončení programu.
 from button import Button                                                                                                   # Načte vlastní třídu Button pro vytváření tlačítek.
 
 pygame.init()                                                                                                               # Inicializuje moduly Pygame, které hra potřebuje.
@@ -7,6 +7,52 @@ SCREEN = pygame.display.set_mode((1280, 720))                                   
 pygame.display.set_caption("Menu - Astrallift")                                                                             # Nastaví text zobrazený v záhlaví okna.
 
 BG = pygame.image.load("Projekt/Hra/assets/images/Background.png")                                                          # Načte obrázek pozadí ze zadaného umístění.
+
+#SQL - Database 
+from pripojeni import *
+
+# 1) Připojení k databázi
+mydb = mysql.connector.connect(
+    host=HOST,          # URL adresa databázového serveru
+    user=USER,          # uživatelské jméno
+    password=PASSWORD,  # heslo
+    database=DATABASE   # název databáze
+)
+
+# 2) Vytvoření kurzoru — přes něj posíláme SQL příkazy a čteme výsledky
+mycursor = mydb.cursor()
+
+# ... zde budeme později psát SQL dotazy ...
+
+# 3) Odpojení — vždy na konci uzavřeme kurzor i spojení
+mycursor.close()
+mydb.close()
+
+print("✅ Připojení a odpojení proběhlo úspěšně.")
+
+# SQL dotaz v trojitých uvozovkách — umožňuje zápis na více řádků
+mycursor.execute("""
+    CREATE TABLE hraci (
+        id INT,
+        jmeno VARCHAR(15),
+    )
+""")
+
+mycursor.execute("""
+    CREATE TABLE hra (
+        id INT,
+        hrac_id INT,
+        skore INT,
+        rucne_vytezeno INT,
+        stroji_vytezeno INT,
+        datum DATETIME,
+    )
+""")
+
+# commit() potvrdí provedení příkazu (jako stisknutí Enter)
+mydb.commit()
+
+#----------------------Konec SQL----------------------
 
 def get_font(size):                                                                                                         # Definuje funkci, která vytvoří herní písmo zadané velikosti.
     return pygame.font.Font("Projekt/Hra/assets/font.ttf", size)                                                            # Načte soubor písma a vrátí jeho verzi dané velikosti.
