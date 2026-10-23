@@ -22,7 +22,12 @@ mydb = mysql.connector.connect(
 # 2) Vytvoření kurzoru — přes něj posíláme SQL příkazy a čteme výsledky
 mycursor = mydb.cursor()
 
+<<<<<<< HEAD
 # ... zde budeme později psát SQL dotazy ...
+=======
+#load images
+enemy_image = pygame.image.load("Maturitni_projekty_EP4_2026-2027/Projekt/Hra/assets/images/zombie1.png").convert_alpha()
+>>>>>>> 9fbcc37 (a)
 
 # 3) Odpojení — vždy na konci uzavřeme kurzor i spojení
 mycursor.close()
