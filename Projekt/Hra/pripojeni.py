@@ -1,6 +1,0 @@
-
-
-HOST=
-USER=
-PASSWORD=
-DATABASE=
