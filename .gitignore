@@ -217,4 +217,10 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-.pripojeni.py
+Projekt/Hra/pripojeni.py
+
+Maturitni projekt/
+├── .gitignore
+└── Projekt/
+    └── Hra/
+        └── pripojeni.py
