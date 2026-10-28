@@ -1,0 +1,70 @@
+/* Základní nastavení písma a pozadí stránky */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0 20px 40px 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigační menu */
+.menu {
+    list-style-type: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+    background-color: #2c3e50;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.menu .a {
+    float: none; /* Modernější zarovnání pomocí flexboxu */
+}
+
+.menu .a a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.menu .a a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+/* Úprava odrážek u seznamu */
+ul:not(.menu) {
+    background: #ffffff;
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.b {
+    margin-bottom: 8px;
+}
+
+/* Obrázky (diagramy) - přehledné a vycentrované */
+p img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Běžný text a odstavce */
+p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
