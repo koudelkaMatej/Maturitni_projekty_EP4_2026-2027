@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Run - Ovládací panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">O hře</a>
+        <a href="stats.html">Žebříčky</a>
+        <a href="gameplay.html">Ovládací panel</a>
+        <a href="login.html">Přihlášení / Registrace</a>
+    </nav>
+    <div class="container">
+        <h2>Ovládací panel hráče</h2>
+        <p>Nastavte si herní profil a mapování kláves pro hru.</p>
+
+        <form onsubmit="event.preventDefault(); alert('Nastavení kláves uloženo!');">
+            <label for="key_binds">Klávesové zkratky (Key Binds):</label>
+            <select name="key_binds" id="key_binds">
+                <option value="SPACE">Mezerník (Skok)</option>
+                <option value="UP_ARROW">Šipka nahoru (Skok)</option>
+                <option value="W">Klávesa W (Skok)</option>
+            </select>
+
+            <label for="tag">Přiřadit štítek (Tag):</label>
+            <select name="tag" id="tag">
+                <option value="Speedrun">Speedrun</option>
+                <option value="Hardcore">Hardcore</option>
+                <option value="Casual">Casual</option>
+            </select>
+
+            <input type="submit" value="Uložit nastavení">
+        </form>
+    </div>
+</body>
+</html>

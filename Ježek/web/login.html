@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Run - Přihlášení</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">O hře</a>
+        <a href="stats.html">Žebříčky</a>
+        <a href="gameplay.html">Ovládací panel</a>
+        <a href="login.html">Přihlášení / Registrace</a>
+    </nav>
+    <div class="container">
+        <h2>Přihlášení / Registrace</h2>
+
+        <form onsubmit="event.preventDefault(); alert('Úspěšně přihlášeno!'); window.location.href='index.html';">
+            <label for="username">Uživatelské jméno:</label>
+            <input type="text" id="username" name="username" placeholder="Zadejte jméno" required>
+            
+            <label for="password">Heslo:</label>
+            <input type="password" id="password" name="password" placeholder="Zadejte heslo" required>
+            
+            <div style="margin-top: 15px;">
+                <input type="submit" value="Přihlásit se">
+                <button type="button" onclick="alert('Účet zaregistrován!');" style="background-color: #337ab7; margin-left: 10px;">Registrovat nový účet</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
