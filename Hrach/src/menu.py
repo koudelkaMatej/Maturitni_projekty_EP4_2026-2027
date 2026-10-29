@@ -23,7 +23,7 @@ class Menu:
             ASSETS_DIR / "exit_button.png"
         ).convert_alpha()
 
-        # pozice tlačítek (mezera 50 px od konce předchozího tlačítka)
+        # pozice tlačítek 
         self.start_rect = self.start_img.get_rect(topleft=(60, 400))
         self.options_rect = self.options_img.get_rect(
             topleft=(self.start_rect.right + 50, 400)
