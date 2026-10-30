@@ -1,5 +1,5 @@
 
-
+/* celkove nastaveni */
 body {
   background: #1a1a1a;
   color: #d4d4d4;
@@ -9,17 +9,20 @@ body {
   padding: 16px;
 }
 
+/* wrapper pro obsahy*/
 #wrapper {
   max-width: 860px;
   margin: 0 auto;
 }
 
+/* oddelovaci cara, bez okraje */
 hr {
   border: none;
   border-top: 1px solid #444;
   margin: 12px 0;
 }
 
+/* zakladni odkazy */
 a {
   color: #32e0ff;
   text-decoration: none;
@@ -27,10 +30,10 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #ffe566;
+  color: #c766ff;
 }
 
-/* NAVBAR */
+/* navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -63,10 +66,10 @@ nav a {
 }
 
 nav a:hover {
-  color: #32e0ff;
+  color: #c766ff;
 }
 
-/* HERO */
+/* hero - nahore stranky s nazvem a podtitulkem stranky */
 #hero {
   text-align: center;
   padding: 20px 0 12px;
@@ -92,9 +95,10 @@ nav a:hover {
   color: #00ff88;
 }
 
+/* pozmenit pozdeji*/
 .big-link:hover {
   color: #66ffb2;
-}
+}  
 
 #controls-note {
   color: #888;
@@ -102,7 +106,7 @@ nav a:hover {
   margin-top: 6px;
 }
 
-/* MAIN LAYOUT */
+/* hlavni obsah - na sloupce */
 #main {
   display: flex;
   gap: 24px;
@@ -110,7 +114,7 @@ nav a:hover {
   margin: 16px 0;
 }
 
-/* UPDATES */
+/* Updaty/novinky */
 #updates {
   flex: 1;
   min-width: 0;
@@ -157,6 +161,7 @@ nav a:hover {
   list-style: none;
 }
 
+/* tagy u updatu/nekterych popoisku nebo kontaktu */
 .tag {
   font-size: 10px;
   padding: 1px 5px;
@@ -168,7 +173,7 @@ nav a:hover {
 .tag-new   { background: #00ff88; color: #000; }
 .tag-patch { background: #612fd4; color: #ffffff; }
 
-/* SIDEBAR */
+/* sidebar */
 #sidebar {
   width: 200px;
   flex-shrink: 0;
@@ -199,7 +204,7 @@ nav a:hover {
   font-size: 12px;
 }
 
-/* FOOTER */
+/* footer */
 #footer {
   text-align: center;
   padding: 10px 0;
@@ -212,7 +217,7 @@ nav a:hover {
 }
 
 #footer a:hover {
-  color: #32e0ff;
+  color: #c766ff;
 }
 
 #visitor {
@@ -220,7 +225,7 @@ nav a:hover {
   color: #555;
 }
 
-/* FORMS */
+/* vyplneni loginu/registace */
 .form-group {
   margin-bottom: 14px;
 }
@@ -248,6 +253,7 @@ nav a:hover {
   border-color: #32e0ff;
 }
 
+/* tlacitka */
 .btn {
   display: inline-block;
   padding: 8px 20px;
@@ -268,6 +274,7 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* hlavni tlacitko na odeslani */
 .btn-primary {
   background: #224488;
   border-color: #4466aa;
@@ -286,7 +293,7 @@ nav a:hover {
   margin-top: 8px;
 }
 
-/* LEADERBOARD */
+/* tabulka vysledku */
 .lb-table {
   width: 100%;
   border-collapse: collapse;
@@ -330,6 +337,8 @@ nav a:hover {
   margin-left: 6px;
 }
 
+/*dropdown tabulka u hracu*/
+
 .lb-detail-row td {
   background: #111;
   padding: 8px 12px !important;
@@ -356,7 +365,7 @@ nav a:hover {
   border-bottom: 1px solid #222;
 }
 
-/* RESPONSIVE */
+/* pro funkci na malych zarizenich - mozna dam pryc?? */
 @media (max-width: 600px) {
   #main {
     flex-direction: column;
