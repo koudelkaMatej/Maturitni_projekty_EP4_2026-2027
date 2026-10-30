@@ -1,14 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} <!-- Dedeni ze sablony base.html (header, navbar, CSS, footer) -->
 
-{% block title %}O hře{% endblock %}
-{% block subtitle %}O hře{% endblock %}
+{% block title %}O hře{% endblock %} <!-- Prepis titulku(zalozka) stranky na O hre -->
+{% block subtitle %}O hře{% endblock %} <!-- Prepis podtitulku stranky na O hre -->
 
-{% block content %}
+{% block content %} <!-- Vlozeni unikatniho obsahu stránky do bloku base.html -->
 
-  <div id="updates">
-    <h2 id="kontaktynadpis">* O hře *</h2>
+  <div id="updates"> <!-- Sekce o hre -->
+    <h2 id="kontaktynadpis">* O hře *</h2> <!-- hlavni nadpis s css id -->
 
-    <div class="update-entry">
+    <div class="update-entry"> <!-- Zde jsou veskere informace o hre, s barevnym titulkem apod. -->
       <p class="update-header">[ABOUT] &mdash; 30.10.2026 &nbsp;<span class="tag tag-patch">O hře</span></p>
       <p class="update-title">OUT OF RAM</p>
       <ul>
@@ -19,12 +19,12 @@
         <li>- Hra vznikla jako projekt k maturitní zkoušce na Střední průmyslové a vyšší odborné školy Jana Palacha 1840 Kladno roku 2026-2027.</li>
         
       </ul>
-      <a href="{{ url_for('register') }}">Nečekej a hraj nyní!</a>
+      <a href="{{ url_for('register') }}">Nečekej a hraj nyní!</a> <!-- presmerovani rovnou na registraci -->
     </div>
 
   </div>
 
-  <div id="sidebar">
+  <div id="sidebar"> <!-- Sidebar - podobny jako v ostatnich strankach -->
 
     <div class="side-box">
       <p class="box-title">:: O hře ::</p>
@@ -52,4 +52,4 @@
 
   </div>
 
-{% endblock %}
+{% endblock %}  <!-- ukonceni obsahu bloku -->

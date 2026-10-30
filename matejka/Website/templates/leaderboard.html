@@ -10,11 +10,12 @@
 
     <div class="update-entry">
 
-      {% if error %}
+      {% if error %}  <!-- pokud by nebylo skore k dispozici -->
         <p class="error-msg">{{ error }}</p>
 
-      {% elif scores %}
+      {% elif scores %} <!-- pokud je -->
         <p style="color:#888;font-size:12px;margin-bottom:10px;">Klikni na hráče pro zobrazení her.</p>
+        <!-- hlavni tabulka -->
         <table class="lb-table">
           <thead>
             <tr>
@@ -25,9 +26,10 @@
             </tr>
           </thead>
           <tbody>
+            <!-- prochazi n-tice v poli scores z Run.py jmeno,skore,pocet her -->
             {% for username, best, games in scores %}
 
-            <!-- Hlavní řádek hráče -->
+            <!-- hlavni radek hrace -->
             <tr class="lb-main-row" onclick="toggleDetail('{{ username }}')" title="Klikni pro detail">
               <td class="lb-rank">{{ loop.index }}</td>
               <td>{{ username }}</td>
@@ -35,9 +37,10 @@
               <td>{{ games }} <span class="lb-expand-hint" id="hint-{{ username }}">▶</span></td>
             </tr>
 
-            <!-- Rozbalovací detail s historií her -->
+            <!-- Rozbalovaci detail s historii her -->
             <tr id="detail-{{ username }}" class="lb-detail-row" style="display:none;">
-              <td colspan="4">
+              <td colspan="4">¨
+                <!-- vlozena tabulka -->
                 <table class="lb-sub-table">
                   <thead>
                     <tr>
@@ -47,6 +50,7 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <!-- vnitrni cyklus - z mapy all_scores vytahuje historii odehranych her-->
                     {% for score, datum in all_scores[username] %}
                     <tr>
                       <td class="lb-rank">{{ loop.index }}</td>
@@ -63,9 +67,9 @@
             {% endfor %}
           </tbody>
         </table>
-
+        <!-- pokud je scores prazdne -->
       {% else %}
-        <p style="color:#888;">Zatím žádné výsledky. Zahraj si a buď první!</p>
+        <p style="color:#888;">Zatím žádné výsledky.</p>
       {% endif %}
 
     </div>
@@ -98,9 +102,11 @@
     function toggleDetail(username) {
       var detail = document.getElementById('detail-' + username);
       var hint   = document.getElementById('hint-'   + username);
+      <!-- pokud je detail skryty -->
       if (detail.style.display === 'none') {
         detail.style.display = 'table-row';
         hint.textContent = '▼';
+        <!-- pokud je viditelny -->
       } else {
         detail.style.display = 'none';
         hint.textContent = '▶';

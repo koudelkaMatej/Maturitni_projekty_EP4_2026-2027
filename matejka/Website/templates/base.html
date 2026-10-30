@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>OUT OF RAM — {% block title %}{% endblock %}</title>
-  <!-- propojeni s css souborem -->
+  <!-- propojeni s css -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
 </head>
 <body>
@@ -25,7 +25,7 @@
 
     <hr />
 
-    <!-- HERO LOGO -->
+    <!-- ASCIII LOGO -->
     <div id="hero">
       <pre id="ascii-art">
 ________   ____ ______________ ________  ___________ __________    _____      _____   
@@ -40,7 +40,7 @@ ________   ____ ______________ ________  ___________ __________    _____      __
     </div>
 
     <hr />
-    <!-- obsah -->
+    <!-- obsah - tady bude rozdilny obsah stranek -->
     <div id="main">
       {% block content %}{% endblock %}
     </div>
