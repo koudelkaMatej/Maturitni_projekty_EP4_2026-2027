@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+{% block subtitle %}Login{% endblock %}
+
+{% block content %}
+
+  <div id="updates">
+    <h2 id="kontaktynadpis">* Login *</h2>
+
+    <div class="update-entry">
+      <p class="update-title">Přihlaš se do hry</p>
+
+      <!-- Náhled formuláře bez odesílací akce -->
+      <form>
+        <div class="form-group">
+          <label for="username">Uživatelské jméno:</label>
+          <input type="text" id="username" name="username" autocomplete="username" maxlength="50" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Heslo:</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        {% if error %}
+          <p class="error-msg">{{ error }}</p>
+        {% endif %}
+        <button type="button" class="btn btn-primary">Přihlásit se</button>
+        <a href="{{ url_for('register') }}" class="btn">Registrovat</a>
+      </form>
+
+    </div>
+  </div>
+
+  <div id="sidebar">
+
+    <div class="side-box">
+      <p class="box-title">:: O hře ::</p>
+      <p>OUT OF RAM je zdarma počítačová hra. Ovládej robota se zaplněnou pamětí. Získej co nejvyšší skóre!</p>
+      <p><a href="{{ url_for('about') }}">Více info &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Nemáš účet? ::</p>
+      <p>Zaregistruj se a začni hrát!</p>
+      <p><a href="{{ url_for('register') }}">Registrace &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Leaderboard ::</p>
+      <p>Podívej se kdo má nejvyšší skóre!</p>
+      <p><a href="{{ url_for('leaderboard') }}">Tabulka výsledků &raquo;</a></p>
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Kontakt{% endblock %}
+{% block subtitle %}Kontakty{% endblock %}
+
+{% block content %}
+
+  <div id="updates">
+    <h2 id="kontaktynadpis">* Kontakty *</h2>
+
+    <div class="update-entry">
+      <p class="update-header">[CONTACT] &mdash; 30.10.2026 &nbsp;<span class="tag tag-patch">E-MAIL</span></p>
+      <p class="update-title"></p>
+      <ul>
+        <li>Jonáš Matějka: matejkaj@spskladno.cz</li>
+        <li>- pro nahlášení chyby mě neváhejte kontaktovat</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div id="sidebar">
+
+    <div class="side-box">
+      <p class="box-title">:: O hře ::</p>
+      <p>OUT OF RAM je zdarma počítačová hra. Ovládej robota se zaplněnou pamětí. Získej co nejvyšší skóre!</p>
+      <p><a href="{{ url_for('about') }}">Více info &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Jak hrát ::</p>
+      <p>
+        Zaregistruj se<br />
+        Spusť hru<br />
+        Získej co nejvyšší skóre<br />
+      </p>
+      <p><a href="{{ url_for('register') }}">Registrace &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Odkazy ::</p>
+      <p>
+        <a href="{{ url_for('leaderboard') }}">Žebříček</a><br />
+        <a href="{{ url_for('about') }}">O hře</a><br />
+        <a href="{{ url_for('contact') }}">Našel jsi chybu?</a>
+      </p>
+    </div>
+
+  </div>
+
+{% endblock %}

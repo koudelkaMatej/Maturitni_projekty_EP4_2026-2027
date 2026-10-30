@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}O hře{% endblock %}
+{% block subtitle %}O hře{% endblock %}
+
+{% block content %}
+
+  <div id="updates">
+    <h2 id="kontaktynadpis">* O hře *</h2>
+
+    <div class="update-entry">
+      <p class="update-header">[ABOUT] &mdash; 30.10.2026 &nbsp;<span class="tag tag-patch">O hře</span></p>
+      <p class="update-title">OUT OF RAM</p>
+      <ul>
+        <li>- Hra OUT OF RAM je jednoduchá, zdarma počítačová hra. Je odvozena od klasické hry Dinorun.</li>
+        <li>- Hra nabízí jednoduché ovládání jedním tlačítkem pro skok, další mohou přibýt.</li>
+        <li>- Pro hraní a zapisování výsledků do tabulky je třeba se zaregistrovat.</li>
+        <li>- Ve hře je hlavním cílem dosáhnout co nejvyššího skóre.</li>
+        <li>- Hra vznikla jako projekt k maturitní zkoušce na Střední průmyslové a vyšší odborné školy Jana Palacha 1840 Kladno roku 2026-2027.</li>
+        
+      </ul>
+      <a href="{{ url_for('register') }}">Nečekej a hraj nyní!</a>
+    </div>
+
+  </div>
+
+  <div id="sidebar">
+
+    <div class="side-box">
+      <p class="box-title">:: O hře ::</p>
+      <p>OUT OF RAM je zdarma počítačová hra. Ovládej robota se zaplněnou pamětí. Získej co nejvyšší skóre!</p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Jak hrát ::</p>
+      <p>
+        Zaregisturj se<br />
+        Spusť hru<br />
+        Získej co nejvyšší skóre<br />
+      </p>
+      <p><a href="{{ url_for('register') }}">Registrace &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Odkazy ::</p>
+      <p>
+        <a href="{{ url_for('leaderboard') }}">Leaderboard</a><br />
+        <a href="{{ url_for('about') }}">O hře</a><br />
+        <a href="{{ url_for('contact') }}">Našel jsi chybu?</a>
+      </p>
+    </div>
+
+  </div>
+
+{% endblock %}

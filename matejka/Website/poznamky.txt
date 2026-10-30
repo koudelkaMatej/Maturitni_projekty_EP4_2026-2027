@@ -1,0 +1,3 @@
+přidat komentáře tam kde chybí
+Upravit script rozkliknuti hracu v tabulce, mby jen highscore? pouzit jinou techonlogii
+Upravit vizualni stranku webu

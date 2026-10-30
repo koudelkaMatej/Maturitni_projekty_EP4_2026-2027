@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block subtitle %}Hlavní stránka{% endblock %}
+
+{% block content %}
+
+  <div id="updates">
+    <h2>* Updaty *</h2>
+
+    <div class="update-entry">
+      <p class="update-header">[v1.0] &mdash; xx.xx.xxxx &nbsp;<span class="tag tag-patch">PATCH</span></p>
+      <p class="update-title">První vydání</p>
+      <ul>
+        <li> - TBD</li>
+      </ul>
+    </div>
+
+    <div class="update-entry">
+      <p class="update-header">[v0.1] &mdash; 20.9.2026 &nbsp;<span class="tag tag-patch">PATCH</span></p>
+      <p class="update-title">Začátek vývoje</p>
+      <ul>
+        <li>Začátek vývoje</li>
+        <li> + Vytvoření repozitáře</li>
+        <li> + Tvorba Dokumentů </li>
+        <li> + Tvorba větví </li>
+        </li>
+      </ul>
+    </div>
+
+    <div class="update-entry">
+      <p class="update-header">[v0.0.1] &mdash; 10.9.2026 &nbsp;<span class="tag tag-patch">PATCH</span></p>
+      <p class="update-title">Založení projektu</p>
+      <ul>
+        <li> + Projekt byl zadán</li>
+        <li> + zvolení tématu</li>
+      </ul>
+      <a href="{{ url_for('about') }}">Více o projektu - About &raquo;</a>
+    </div>
+
+  </div>
+
+  <div id="sidebar">
+
+    <div class="side-box">
+      <p class="box-title">:: O hře ::</p>
+      <p>OUT OF RAM je zdarma počítačová hra. Ovládej robota se zaplněnou pamětí. Získej co nejvyšší skóre!</p>
+      <p><a href="{{ url_for('about') }}">Více info &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Jak hrát ::</p>
+      <p>
+        Zaregistruj se<br />
+        Spusť hru<br />
+        Získej co nejvyšší skóre<br />
+      </p>
+      <p><a href="{{ url_for('register') }}">Registrovat &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Odkazy ::</p>
+      <p>
+        <a href="{{ url_for('leaderboard') }}">Tabulka výsledků</a><br />
+        <a href="{{ url_for('about') }}">O hře</a><br />
+        <a href="{{ url_for('contact') }}">Našel jsi chybu?</a>
+      </p>
+    </div>
+
+  </div>
+
+{% endblock %}

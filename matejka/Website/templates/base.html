@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>OUT OF RAM — {% block title %}{% endblock %}</title>
+  <!-- propojeni s css souborem -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <!-- NAVBAR -->
+    <div id="navbar">
+      <span id="site-title">OUT OF RAM</span>
+      <nav>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('login') }}">Login</a> |
+        <a href="{{ url_for('register') }}">Registrace</a> |
+        <a href="{{ url_for('leaderboard') }}">Žebříček</a> |
+        <a href="{{ url_for('about') }}">O hře</a> |
+        <a href="{{ url_for('contact') }}">Kontakty</a>
+      </nav>
+    </div>
+
+    <hr />
+
+    <!-- HERO LOGO -->
+    <div id="hero">
+      <pre id="ascii-art">
+________   ____ ______________ ________  ___________ __________    _____      _____   
+\_____  \ |    |   \__    ___/ \_____  \ \_   _____/ \______   \  /  _  \    /     \  
+ /   |   \|    |   / |    |     /   |   \ |    __)    |       _/ /  /_\  \  /  \ /  \ 
+/    |    \    |  /  |    |    /    |    \|     \     |    |   \/    |    \/    Y    \
+\_______  /______/   |____|    \_______  /\___  /     |____|_  /\____|__  /\____|__  /
+        \/                             \/     \/             \/         \/         \/ 
+      </pre>
+      <p id="tagline">-- Stará ale nesmrtelná videohra, v nové podobě --</p>
+      <p id="controls-note">{% block subtitle %}{% endblock %}</p>
+    </div>
+
+    <hr />
+    <!-- obsah -->
+    <div id="main">
+      {% block content %}{% endblock %}
+    </div>
+
+    <hr />
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <p>OUT OF RAM &copy; 2026 &nbsp;|&nbsp;
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('login') }}">Login</a> |
+        <a href="{{ url_for('leaderboard') }}">Žebříček</a> |
+        <a href="{{ url_for('about') }}">O hře</a> |
+        <a href="{{ url_for('contact') }}">Kontakty</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

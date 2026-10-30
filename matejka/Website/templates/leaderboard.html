@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}Leaderboard{% endblock %}
+{% block subtitle %}Tabulka výsledků{% endblock %}
+
+{% block content %}
+
+  <div id="updates">
+    <h2 id="kontaktynadpis">* Tabulka výsledků *</h2>
+
+    <div class="update-entry">
+
+      {% if error %}
+        <p class="error-msg">{{ error }}</p>
+
+      {% elif scores %}
+        <p style="color:#888;font-size:12px;margin-bottom:10px;">Klikni na hráče pro zobrazení her.</p>
+        <table class="lb-table">
+          <thead>
+            <tr>
+              <th class="lb-rank">#</th>
+              <th>Hráč</th>
+              <th>Nejlepší skóre</th>
+              <th>Počet her</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for username, best, games in scores %}
+
+            <!-- Hlavní řádek hráče -->
+            <tr class="lb-main-row" onclick="toggleDetail('{{ username }}')" title="Klikni pro detail">
+              <td class="lb-rank">{{ loop.index }}</td>
+              <td>{{ username }}</td>
+              <td>{{ best }}</td>
+              <td>{{ games }} <span class="lb-expand-hint" id="hint-{{ username }}">▶</span></td>
+            </tr>
+
+            <!-- Rozbalovací detail s historií her -->
+            <tr id="detail-{{ username }}" class="lb-detail-row" style="display:none;">
+              <td colspan="4">
+                <table class="lb-sub-table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Skóre</th>
+                      <th>Datum</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for score, datum in all_scores[username] %}
+                    <tr>
+                      <td class="lb-rank">{{ loop.index }}</td>
+                      <td>{{ score }}</td>
+                      <!-- Zobrazení data jako řetězce bez .strftime() -->
+                      <td>{{ datum }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            {% endfor %}
+          </tbody>
+        </table>
+
+      {% else %}
+        <p style="color:#888;">Zatím žádné výsledky. Zahraj si a buď první!</p>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <div id="sidebar">
+
+    <div class="side-box">
+      <p class="box-title">:: O hře ::</p>
+      <p>OUT OF RAM je zdarma počítačová hra. Ovládej robota se zaplněnou pamětí. Získej co nejvyšší skóre!</p>
+      <p><a href="{{ url_for('about') }}">Více info &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Máš účet? ::</p>
+      <p>Přihlaš se a začni hrát!</p>
+      <p><a href="{{ url_for('login') }}">Login &raquo;</a></p>
+    </div>
+
+    <div class="side-box">
+      <p class="box-title">:: Nový hráč? ::</p>
+      <p>Zaregistruj se zdarma!</p>
+      <p><a href="{{ url_for('register') }}">Registrace &raquo;</a></p>
+    </div>
+
+  </div>
+
+  <!-- JavaScript pro rozbalování detailu v tabulce -->
+  <script>
+    function toggleDetail(username) {
+      var detail = document.getElementById('detail-' + username);
+      var hint   = document.getElementById('hint-'   + username);
+      if (detail.style.display === 'none') {
+        detail.style.display = 'table-row';
+        hint.textContent = '▼';
+      } else {
+        detail.style.display = 'none';
+        hint.textContent = '▶';
+      }
+    }
+  </script>
+
+{% endblock %}
