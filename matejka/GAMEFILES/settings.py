@@ -7,8 +7,8 @@ Zde buduou funkce pro nastavení hry, zvuk, ovladani apod.
 import pygame
 
 
-SCREEN_WIDTH = 800   #rozmery okna
-SCREEN_HEIGHT = 450
+SCREEN_WIDTH = 1920   #rozmery okna
+SCREEN_HEIGHT = 1080
 FPS = 60
 
 # definice barev, pozadi, text atd.

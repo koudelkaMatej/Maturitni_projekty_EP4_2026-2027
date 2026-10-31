@@ -1,0 +1,8 @@
+Pozadí 1920x1080
+Velikost nazvu - 1780x280
+Velikost tl. start,settings,exit - 700x200
+Velikost Login, Register, Web - 230x90
+
+
+ZMENIT GRAFIKU TLACITEK
+nejspis ve finale jen tl na web nebo web+register
