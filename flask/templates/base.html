@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <ul>
+        <li class="logo"><a href="{{ url_for('index') }}">NEON//GHOST</a></li>
+        <li{% if stranka == 'index' %} class="aktivni"{% endif %}><a href="{{ url_for('index') }}">Domů</a></li>
+        <li{% if stranka == 'mechaniky' %} class="aktivni"{% endif %}><a href="{{ url_for('mechaniky') }}">Mechaniky</a></li>
+        <li{% if stranka == 'pravidla' %} class="aktivni"{% endif %}><a href="{{ url_for('pravidla') }}">Pravidla</a></li>
+        <li{% if stranka == 'o_mne' %} class="aktivni"{% endif %}><a href="{{ url_for('o_mne') }}">O mně</a></li>
+        <li{% if stranka == 'kontakty' %} class="aktivni"{% endif %}><a href="{{ url_for('kontakty') }}">Kontakty</a></li>
+    </ul>
+
+    <div class="content">
+{% block content %}{% endblock %}
+    </div>
+
+    <footer>NEON//GHOST · maturitní projekt EP4 · Adam Lipš</footer>
+</body>
+</html>

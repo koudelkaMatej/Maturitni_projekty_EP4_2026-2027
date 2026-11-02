@@ -1,0 +1,184 @@
+/* spolecny styl pro vsechny stranky */
+body {
+    margin: 0;
+    background-color: rgb(10, 5, 25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* horni menu */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 4px;
+    background-color: black;
+    border-bottom: 3px solid rgb(255, 40, 170);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+li {
+    float: left;
+    margin-right: 5px;
+}
+
+li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+li:not(:first-child) a:hover {
+    color: rgb(0, 230, 255);
+    border: 2px solid rgb(0, 230, 255);
+}
+
+.logo a {
+    color: rgb(0, 230, 255);
+    font-size: 18px;
+}
+
+.aktivni a {
+    color: rgb(255, 40, 170);
+}
+
+/* obsah */
+.content {
+    margin-top: 110px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.card {
+    background-color: rgb(25, 15, 55);
+    border: 3px solid rgb(90, 30, 140);
+    padding: 30px 50px;
+    width: 800px;
+    text-align: center;
+}
+
+.card h1,
+.card h2 {
+    margin-top: 0;
+    color: rgb(0, 230, 255);
+}
+
+.card p {
+    color: rgb(200, 200, 220);
+    line-height: 1.6;
+}
+
+/* uvodni banner na hlavni strance */
+.banner {
+    width: 906px;
+    padding: 70px 0;
+    text-align: center;
+    background: linear-gradient(rgb(10, 5, 25), rgb(90, 30, 140));
+    border-bottom: 4px solid rgb(255, 40, 170);
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 80px;
+    color: rgb(0, 230, 255);
+    text-shadow: 0 0 20px rgb(0, 230, 255);
+}
+
+.banner p {
+    font-size: 20px;
+}
+
+/* tlacitko jako v menu hry */
+.tlacitko {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: black;
+    border: 3px solid rgb(255, 40, 170);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tlacitko:hover {
+    border-color: rgb(0, 230, 255);
+    color: rgb(0, 230, 255);
+}
+
+/* obrazky */
+.obrazek {
+    width: 90%;
+    border: 2px solid rgb(90, 30, 140);
+    margin-top: 10px;
+}
+
+/* pravidla a kontakty */
+.rule {
+    margin-bottom: 20px;
+}
+
+.rule strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: rgb(255, 40, 170);
+}
+
+.rule span {
+    display: block;
+    color: rgb(200, 200, 220);
+}
+
+/* tabulka s ovladanim */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(90, 30, 140);
+    text-align: left;
+}
+
+.klavesa {
+    font-family: Consolas, monospace;
+    color: rgb(0, 230, 255);
+}
+
+.mechaniky {
+    display: flex;
+    gap: 20px;
+}
+
+.mechanika {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid rgb(90, 30, 140);
+    transition: 0.3s;
+}
+
+.mechanika:hover {
+    border-color: rgb(0, 230, 255);
+}
+
+.mechanika h3 {
+    color: rgb(255, 40, 170);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: rgb(120, 110, 150);
+    font-size: 14px;
+}

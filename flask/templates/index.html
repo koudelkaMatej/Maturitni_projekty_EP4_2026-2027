@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}NEON//GHOST{% endblock %}
+
+{% block content %}
+        <div class="banner">
+            <h1>NEON//GHOST</h1>
+            <p>Top-down stealth hra v Pythonu a pygame</p>
+            <a class="tlacitko" href="{{ url_for('pravidla') }}">JAK SE HRAJE</a>
+        </div>
+
+        <div class="card">
+            <h1>Vítejte na webu mé hry</h1>
+            <p>NEON//GHOST je moje maturitní práce. Je to stealth hra viděná shora, ve které se hráč
+               musí proplížit neonovým městem tak, aby ho neviděli strážci ani kamery.</p>
+        </div>
+
+        <div class="card">
+            <h2>Proč stealth hra</h2>
+            <p>Chtěl jsem udělat něco jiného než střílečku. Ve stealth hře se nevyhrává rychlými reflexy,
+               ale tím, že hráč přemýšlí, kudy projít.</p>
+        </div>
+
+        <div class="card">
+            <h2>Hlavní menu</h2>
+            <p>Takhle vypadá menu hry. Pozadí s mřížkou a zapadajícím sluncem je nakreslené přímo v pygame.</p>
+            <img src="{{ url_for('static', filename='menu.png') }}" class="obrazek" alt="Hlavní menu hry">
+        </div>
+{% endblock %}

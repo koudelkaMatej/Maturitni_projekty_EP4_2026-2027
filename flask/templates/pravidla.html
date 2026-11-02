@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Pravidla{% endblock %}
+
+{% block content %}
+        <div class="card">
+            <h2>Pravidla</h2>
+
+            <div class="rule">
+                <strong>Cíl hry</strong>
+                <span>Dostat se na konec každého levelu, aniž by tě strážci chytili.</span>
+            </div>
+
+            <div class="rule">
+                <strong>Odhalení</strong>
+                <span>Když tě strážce vidí, plní se ukazatel. Když se naplní, spustí se poplach a level začíná znovu.</span>
+            </div>
+
+            <div class="rule">
+                <strong>Strážci</strong>
+                <span>Chodí po stále stejné trase. Sleduj je a najdi chvíli, kdy proběhnout.</span>
+            </div>
+
+            <div class="rule">
+                <strong>Levely</strong>
+                <span>Každý další level má víc strážců a složitější mapu.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Ovládání</h2>
+            <table>
+                <tr><td class="klavesa">W A S D</td><td>pohyb</td></tr>
+                <tr><td class="klavesa">Shift</td><td>plížení</td></tr>
+                <tr><td class="klavesa">E</td><td>otevřít dveře</td></tr>
+                <tr><td class="klavesa">Esc</td><td>zpět do menu</td></tr>
+                <tr><td class="klavesa">myš</td><td>výběr v menu</td></tr>
+            </table>
+        </div>
+{% endblock %}
