@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Mechaniky{% endblock %}
+
+{% block content %}
+        <div class="card">
+            <h1>Mechaniky</h1>
+            <p>Hlavní věci, na kterých hra stojí.</p>
+            <div class="mechaniky">
+                <div class="mechanika">
+                    <h3>Kužel vidění</h3>
+                    <p>Strážce vidí jen před sebe. Za zdí se dá schovat.</p>
+                </div>
+                <div class="mechanika">
+                    <h3>Stíny</h3>
+                    <p>Ve tmě si hráče strážce všimne mnohem později.</p>
+                </div>
+                <div class="mechanika">
+                    <h3>Hluk</h3>
+                    <p>Když hráč běží, strážci ho uslyší. Plížení je tiché.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Jak probíhá jeden level</h2>
+            <p>Start levelu → plížení po mapě → vidí tě strážce?<br>
+               <strong>Ne:</strong> dojdeš k východu a jdeš do dalšího levelu.<br>
+               <strong>Ano:</strong> spustí se poplach a level začíná znovu.</p>
+            <!-- sem pozdeji dat diagram, napr. diagram.png -->
+        </div>
+{% endblock %}
